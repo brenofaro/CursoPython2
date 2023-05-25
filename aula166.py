@@ -1,5 +1,5 @@
 # Decoradores "Syntax Sugar"
-
+# Atribui uma nova funcionalidade para a função que ele está
 
 # Funções decoradoras
 
