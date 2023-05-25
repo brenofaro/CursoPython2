@@ -1,22 +1,11 @@
-from pprint import pprint
-
-lista = [
-    {'nome': 'Luiz', 'sobrenome': 'miranda'},
-    {'nome': 'Maria', 'sobrenome': 'Oliveira'},
-    {'nome': 'Daniel', 'sobrenome': 'Silva'},
-    {'nome': 'Eduardo', 'sobrenome': 'Moreira'},
-    {'nome': 'Aline', 'sobrenome': 'Souza'},
-]
+def criar_saudacao(saudacao):
+    def saudar(nome):
+        return f'{saudacao}, {nome}'
+    return saudar
 
 
-def retorna_nome(item):
-    return item['sobrenome'].lower()
+falar_bom_dia = criar_saudacao("bom dia")
+falar_boa_noite = criar_saudacao("boa noite")
 
-
-# lista.sort(key=retorna_nome)
-
-lista.sort(key=lambda x: x['nome'])
-
-pprint(lista)
-
-string = 'oi'
+print(falar_bom_dia("Luiz"))
+print(falar_boa_noite("Maria"))
