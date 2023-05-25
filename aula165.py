@@ -2,7 +2,7 @@
 
 # Função Decoradora
 def create_function(function):
-    def interna(*args, **kwargs):
+    def intern(*args, **kwargs):
         # "Inicio da decoração"
 
         for arg in args:
@@ -12,13 +12,10 @@ def create_function(function):
 
         return resultado
 
-    return interna
+    return intern
 
 
-def inverte_string(string):
-    def maiuscula_string():
-        return
-
+def reverse_string(string):
     return string[::-1]
 
 
@@ -27,7 +24,7 @@ def is_string(param):
         raise TypeError("param deve ser uma string")
 
 
-new_reverse = create_function(inverte_string)
-invertida = new_reverse("123")
+new_reverse = create_function(reverse_string)
+reverse = new_reverse("123")
 
-print(invertida)
+print(reverse)
