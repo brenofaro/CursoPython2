@@ -8,14 +8,14 @@
 # classes.
 
 class Pessoa:
-    def __init__(self):
-        self.nome = ''
-        self.idade = 10
+    def __init__(self, nome, sobrenome, idade):
+        self.nome = nome
+        self.sobrenome = sobrenome
+        self.idade = idade
 
 
-p1 = Pessoa()
-p1.anoNascimento = 2002
+p1 = Pessoa("Jose", "dos Santos", 22)
+p2 = Pessoa("Maria", "dos Anjos", 32)
 
-
-print(p1.idade)
-print(p1.anoNascimento)
+print(p1.nome,p1.sobrenome)
+print(p2.nome,p2.sobrenome)
