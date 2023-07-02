@@ -26,3 +26,36 @@
 # Para saber a ordem de chamada dos métodos
 # Use o método de classe Classe.mro()
 # Ou o atributo __mro__ (Dunder - Double Underscore)
+
+class A:
+    ...
+
+    def quem_sou(self):
+        print("Eu sou A")
+
+
+class B(A):
+    ...
+
+    # def quem_sou(self):
+    #     print("Eu sou B")
+
+
+class C(A):
+    ...
+
+    def quem_sou(self):
+        print("Eu sou C")
+
+
+class D(B, C):
+    ...
+
+    # def quem_sou(self):
+    #     print("Eu sou D")
+
+
+d = D()
+
+d.quem_sou()
+print(D.mro())
