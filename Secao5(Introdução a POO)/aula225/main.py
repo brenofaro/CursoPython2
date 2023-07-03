@@ -1,9 +1,9 @@
-from log import LogFileMixin, LogPrintMixin
+from eletronico import Smartphone
+from log import LogFileMixin
 
-lp = LogPrintMixin()
-lp._log("Qualquer")
-lp.log_error("Envio")
+galaxy_s = Smartphone("Galaxy S")
+xiaomi = Smartphone("Xiaomi mi 3")
 
-lf = LogFileMixin()
-lf._log("Qualquer")
-lf.log_error("Envio")
+galaxy_s.ligar()
+xiaomi.desligar()
+
