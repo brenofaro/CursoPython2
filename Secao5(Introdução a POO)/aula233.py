@@ -8,17 +8,23 @@
 # Relançando exceções
 # Adicionando notas em exceções (3.11.0)
 
-class MyError(Exception):
+class MeuError(Exception):
+    ...
+
+class OutroErro(Exception):
     ...
 
 
-class Pessoa:
-    def __init__(self, nome):
-        self.nome = nome
+def levantar():
+    exception_ = MeuError('a', 'b', 'c')
+    raise exception_
 
-    def falar(self):
-        raise MyError(f"{self.nome} nao pode falar")
+try:
+    levantar()
+except (MeuError, ZeroDivisionError) as error:
+    print(error.__class__.__name__)
+    print(error.args)
+    print()
+    exception_ = OutroErro("Lancando novamente")
+    raise exception_ from error
 
-
-p1 = Pessoa("Carla")
-p1.falar()
